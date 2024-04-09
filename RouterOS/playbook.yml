@@ -1,0 +1,12 @@
+---
+- name: RouterOS test with network_cli connection
+  hosts: mikrotik
+  gather_facts: false
+  tasks:
+
+  - name: Gather system resources
+    community.routeros.command:
+      commands:
+        - /ip
+        - print
+
